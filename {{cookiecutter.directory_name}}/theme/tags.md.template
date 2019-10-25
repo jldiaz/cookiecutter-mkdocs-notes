@@ -1,5 +1,5 @@
 ---
-title: Por etiquetas
+title: Tags
 ---
 
 {% for tag, pages in tags %}
