@@ -1,0 +1,55 @@
+site_name: {{cookiecutter.site_name}}
+site_description: {{cookiecutter.site_description}}
+
+theme:
+  name: material
+  language: es
+  custom_dir: theme
+  palette:
+    primary: deeppurple
+    accent: teal
+  logo:
+    icon: description
+  # font:
+  #   text: Lora
+  #   code: Roboto Mono
+  feature:
+    tabs: true
+
+markdown_extensions:
+  - markdown.extensions.admonition:
+  - markdown.extensions.toc:
+      slugify: !!python/name:pymdownx.slugs.uslugify
+      permalink: "#"
+      baselevel: 2
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:pymdownx.emoji.to_png
+  - pymdownx.superfences:
+      preserve_tabs: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.inlinehilite:
+  - pymdownx.details:
+  - pymdownx.tilde:
+  - pymdownx.mark:
+  - pymdownx.keys:
+  - pymdownx.progressbar:
+  - pymdownx.smartsymbols:
+  - pymdownx.tasklist:
+
+
+copyright: (c) {{cookiecutter.author}}
+
+extra_css:
+  - extra.css
+  - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css
+extra_javascript:
+  - extra.js
+  - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.js
+
+plugins:
+    - search:
+        lang: [es, en]
+    - tags:
+        tags_folder: {{cookiecutter.aux_folder}}
+        tags_template: theme/tags.md.template

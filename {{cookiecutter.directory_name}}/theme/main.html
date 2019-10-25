@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+{% block content %}
+
+<!-- Edit button, if URL was defined -->
+{% if page.edit_url %}
+  <a href="{{ page.edit_url }}"
+      title="{{ lang.t('edit.link.title') }}"
+      class="md-icon md-content__icon">&#xE3C9;<!-- edit --></a>
+{% endif %}
+
+<!--
+  Hack: check whether the content contains a h1 headline. If it
+  doesn't, the page title (or respectively site name) is used
+  as the main headline.
+-->
+{% if not "\x3ch1" in page.content %}
+  <h1 class="title" title="{{page.meta.comment}}">
+      {{ page.meta.fulltitle if page.meta.fulltitle else
+        page.meta.title if page and page.meta and page.meta.title else page.title | default(config.site_name, true) }}
+      {% if page.meta.url %}
+      <a href="{{page.meta.url}}" style="font-size: 60%" title="{{page.meta.url}}">↗️</a>
+      {% endif %}
+  </h1>
+  {% if page and page.meta %}
+    {% if page.meta.author %}
+        <div class="authors">
+            {{ page.meta.author|join(",&#x3000;") }}
+        </div>
+    {% endif %}
+    {% if page.meta.year %}
+        <div class="year">
+            <span title="Leído el {{page.meta.fecha_lectura}}">{{ page.meta.year }}</span>
+        </div>
+    {% endif %}
+  {% endif %}
+  {% if page.meta.tags %}
+    <span class="label-icon md-icon">&#xE54e; </span> Etiquetas:
+    {% for tag in page.meta.tags|sort %}
+    <span class="tag"><a href="/tags.html#{{tag}}">{{tag}}</a></span>
+    {% endfor %}
+  {% endif %}
+  <hr/>
+{% endif %}
+
+<!-- Content -->
+{{ page.content }}
+
+<!-- Source files 
+{% block source %}
+   {{ super() }}
+{% endblock %}
+-->
+
+{% endblock %}
+
+{% block footer %}
+{#-
+  This file was automatically generated - do not edit
+-#}
+{% import "partials/language.html" as lang with context %}
+<footer class="md-footer">
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        {% if config.copyright %}
+          <span class="md-footer-copyright__highlight">
+            {{ config.copyright }}
+          </span>
+        {% endif %}
+      </div>
+      {% include "partials/social.html" %}
+    </div>
+  </div>
+</footer>
+{% endblock %}

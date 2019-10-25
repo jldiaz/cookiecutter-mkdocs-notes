@@ -1,0 +1,14 @@
+---
+title: Por etiquetas
+---
+
+{% for tag, pages in tags %}
+
+???+ label "<a name="{{tag}}">{{tag}}</a>"
+    {%  for page in pages | selectattr("year") | sort(attribute="year") 
+    %}<div class="card">[{{page.title}}]({{page.filename}}) <span class="fulltitle">{{page.fulltitle|truncate(70)}}</span></div>{% 
+    endfor %}{%  for page in pages | selectattr("year", "undefined")
+    %}<div class="card">[{{page.title}}]({{page.filename}}) <span class="fulltitle">{{page.fulltitle|truncate(70)}}</span></div>{%
+    endfor %}
+
+{% endfor %}

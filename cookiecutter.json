@@ -1,0 +1,10 @@
+{
+    "directory_name": "my_notes",
+    "site_name": "My Notes",
+    "site_description": "A site to collect notes about my readings",
+    "author": "JL Diaz",
+    "aux_folder": "/tmp/aux/my_notes",
+    "_copy_without_render": [
+        "*.html", "*.template"
+    ]
+}
