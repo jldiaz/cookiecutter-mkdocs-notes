@@ -1,0 +1,4 @@
+{{cookiecutter.directory_name}}/theme/* linguist-vendored
+{{cookiecutter.directory_name}}/docs/* linguist-documentation=false
+{{cookiecutter.directory_name}}/requirements.txt linguist-language=Python
+
