@@ -55,4 +55,4 @@ You can also generate a static site with the HTML.
 (mynotes) $ mkdocs build
 ```
 
-See [mkdocs documentation](https://www.mkdocs.org/) for more options, or if you want to custmize the plugins, theme and options.
+See [mkdocs documentation](https://www.mkdocs.org/) for more options, or if you want to customize the plugins, theme and options.
