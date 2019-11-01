@@ -13,7 +13,7 @@ Each `.md` file in the `/docs` hiearchy is intended to be the notes you take whi
 
 Each `.md` should contain a header with metadata about the paper/book it describes.
  
-The metadata header uses YAML format, and it is delimited by `---`. Some of the expected fields aer:
+The metadata header uses YAML format, and it is delimited by `---`. Some of the expected fields are:
 
 * `title`: Short title which will appear in the nav menu, and in the tags page as hyperlink to the page. For example `Author-Year`. If this field is absent, the default title will be the first header in the document.
 * `fulltitle`: Full title of the paper/book. It will appear at the header of the page, and in the tags page (shortened). If this field is absent, the value of the field `title` will be used instead. If the `field` title is also absent, the html version of the page won't show any metadata (including any of the following).
