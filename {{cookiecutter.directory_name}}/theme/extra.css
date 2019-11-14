@@ -78,18 +78,18 @@ blockquote {
 
 .progress-label {
     position: absolute;
-    width: 100%;
-    top: -5pt;
+    left: 3pt;
+    top: -0.87em;
     line-height: 10pt;
-    color: white;
     font-size: 10pt;
     text-align: center;
-    width: 100%;
     padding: 0pt;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
 }
   
 .progress-bar {
-height: 0.8em;
+height: 0.9em;
 float: left;
 background-color: #53606d;
 }
@@ -98,7 +98,7 @@ background-color: #53606d;
 display: block;
 width: 100%;
 margin: 0 0;
-height: 0.8em;
+height: 0.9em;
 background-color: #b4b4b4;
 position: relative;
 }
