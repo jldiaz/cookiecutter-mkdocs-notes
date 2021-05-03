@@ -8,13 +8,9 @@ theme:
   palette:
     primary: deeppurple
     accent: teal
-  logo:
-    icon: description
-  # font:
-  #   text: Lora
-  #   code: Roboto Mono
-  feature:
-    tabs: true
+  features:
+    - navigation.tabs
+    - navigation.instant
 
 markdown_extensions:
   - markdown.extensions.admonition:
@@ -23,12 +19,14 @@ markdown_extensions:
       permalink: "#"
       baselevel: 2
   - pymdownx.emoji:
-      emoji_generator: !!python/name:pymdownx.emoji.to_png
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
   - pymdownx.superfences:
       preserve_tabs: true
   - pymdownx.arithmatex:
       generic: true
   - pymdownx.inlinehilite:
+  - pymdownx.tabbed:
   - pymdownx.details:
   - pymdownx.tilde:
   - pymdownx.mark:
@@ -36,6 +34,8 @@ markdown_extensions:
   - pymdownx.progressbar:
   - pymdownx.smartsymbols:
   - pymdownx.tasklist:
+  - attr_list:
+
 
 
 copyright: (c) {{cookiecutter.author}}
@@ -47,8 +47,13 @@ extra_javascript:
   - extra.js
   - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.js
 
+extra:
+  version:
+    provider: mike
+
 plugins:
     - search:
+        separator: '[\s\-\.]+'
         lang: [es, en]
     - tags:
         tags_folder: {{cookiecutter.aux_folder}}

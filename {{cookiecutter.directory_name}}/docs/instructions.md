@@ -68,12 +68,14 @@ Each document is written in Markdown and can make use of several markdown extens
 * Smartsymbols, among other, it allows to typeset `-->` or `1/2` to get --> or 1/2.
 * Superfences. Expands the possibilities of code fragment, allowing for marking lines, numbering, grouping listings in tabs, etc. It also allows those code fragments to be used inside other nested environments, such as quotes, admonitions or details (see later), as well as item lists, enumerations, etc. 
 
-    ```python tab="Python example" linenums="1" hl_lines="2"
+=== "Python example"
+    ```{python tab="Python example" linenums="1" hl_lines="2"}
     # Hello world in python
     print("Hello world")
     ```
 
-    ```c tab="C example" linenums="1" hl_lines="5"
+=== "C example"
+    ```{c tab="C example" linenums="1" hl_lines="5"}
     // Hola mundo en C
     #include<stdio.h>
     int main()

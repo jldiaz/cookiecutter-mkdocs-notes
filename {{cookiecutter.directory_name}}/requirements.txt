@@ -1,6 +1,6 @@
-mkdocs==1.0.4
-mkdocs-markdownextradata-plugin==0.0.6
-mkdocs-material==4.4.3
-mkdocs-minify-plugin==0.2.1
-pymdown-extensions==6.1
-git+https://github.com/jldiaz/mkdocs-plugin-tags.git@alt
+mkdocs==1.1.2
+mkdocs-markdownextradata-plugin==0.2.4
+mkdocs-material==7.1.3
+mkdocs-minify-plugin==0.4.0
+pymdown-extensions==8.1.1
+git+https://github.com/jldiaz/mkdocs-plugin-tags.git

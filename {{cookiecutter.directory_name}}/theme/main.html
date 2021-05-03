@@ -34,8 +34,8 @@
     {% endif %}
   {% endif %}
   {% if page.meta.tags %}
-    <span class="label-icon md-icon">&#xE54e; </span> Etiquetas:
-    {% for tag in page.meta.tags|sort %}
+  <span class="twemoji">{% include ".icons/octicons/tag-16.svg" %}</span> 
+  Etiquetas:    {% for tag in page.meta.tags|sort %}
     <span class="tag"><a href="/tags.html#{{tag}}">{{tag}}</a></span>
     {% endfor %}
   {% endif %}
@@ -45,11 +45,6 @@
 <!-- Content -->
 {{ page.content }}
 
-<!-- Source files 
-{% block source %}
-   {{ super() }}
-{% endblock %}
--->
 
 {% endblock %}
 
