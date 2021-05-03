@@ -101,8 +101,8 @@ Each document is written in Markdown and can make use of several markdown extens
 
     ```markdown
     ??? danger "Warning"
-        This part is hidden until clicking in the header. You can use `???+` instead of
-        `???` to cause an expanded initial state.
+        This part is hidden until clicking in the header. You can use 
+        `???+` instead of `???` to cause an expanded initial state.
     ```
 
     ??? info "Listing of all admonition/details types"
@@ -130,7 +130,7 @@ Each document is written in Markdown and can make use of several markdown extens
         !!! bug
             
 
-* Math equations with con latex (KaTeX is used as render). For example `$$\sum_x\frac{1}{x}$$` produces:
+* Math equations with latex (KaTeX is used as render). For example `$$\sum_x\frac{1}{x}$$` produces:
 
     $$\sum_x\frac{1}{x}$$ 
 
